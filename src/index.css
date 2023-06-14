@@ -1,13 +1,187 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #f1f8f9;
+}
+nav {
+  height: 60px;
+  background-color: rgb(62, 62, 232);
+}
+.nav-center {
+  display: flex;
+  justify-content: space-around;
+}
+.nav-center h3 {
+  font-size: 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #fff;
+  letter-spacing: 3px;
+  margin-top: 0.75rem;
+  text-transform: capitalize;
+}
+.nav-container {
+  position: relative;
+}
+.icon {
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+.amount {
+  position: absolute;
+  top: 8px;
+  right: -10px;
+  background-color: rgb(6, 6, 100);
+  border-radius: 50%;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 50%;
+}
+.cart-container {
+  /* min-height: calc(100vh - 60px); */
+  text-align: center;
+}
+.cart-container h2 {
+  letter-spacing: 3px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+}
+.empty {
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  margin-top: 1.5rem;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+}
+.clear-btn {
+  margin: 1.5rem auto;
+  padding: 0.25rem 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  border: 1px solid rgb(211, 116, 116);
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.clear-btn:hover {
+  background-color: rgb(233, 73, 73);
+}
+hr {
+  max-width: 60vw;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.item {
+  width: 80vw;
+  margin: 0.5rem auto;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.item img {
+  width: 200px;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 2px #222;
+}
+.item_amount {
+  color: #111;
+}
+.amount-btn {
+  border: none;
+  padding: 4px;
+  color: teal;
+  cursor: pointer;
+  margin-top: 0;
+  border-radius: 0.25rem;
+}
+.amount-btn:hover {
+  background: teal;
+  color: #fff;
+}
+@media (min-width: 576px) {
+  .item {
+    width: 85vw;
+  }
+}
+.price {
+  color: teal;
+  letter-spacing: 2px;
+}
+.remove-btn {
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 0.2rem 0.5rem;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 0.25rem;
+}
+.remove-btn:hover {
+  background: teal;
+  color: #fff;
+}
+.modal-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  /* visibility: hidden;
+  z-index: -1; */
+}
+.show-modal {
+  visibility: visible;
+  z-index: 1;
+}
+.modal {
+  background: #fff;
+  max-width: 20rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+}
+.modal-h4 {
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+.btn-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+.modal-btn {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  padding: 0.25rem 0.75rem;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.modal-btn:hover {
+  background: rgb(26, 82, 26);
+  color: #fff;
+}
+.cancel:hover {
+  background: rgb(114, 20, 20);
+  color: #440303;
+}
+.loading {
+  font-size: 2rem;
+  text-align: center;
+  color: #173459;
+  margin-top: 4rem;
 }
